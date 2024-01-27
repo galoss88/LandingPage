@@ -1,4 +1,4 @@
-import { Container, Typography } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 import useImageSlider from "../../../../hooks/useImageSlider";
 
 const Recomendations = () => {
@@ -41,14 +41,23 @@ const Recomendations = () => {
     },
   ];
 
-  const { SliderImages } = useImageSlider(images);
+  const { SliderImages: SliderImagesLunch } = useImageSlider(images);
+  const { SliderImages: SliderImagesBreakfastAndDinner } =
+    useImageSlider(images);
+  const { SliderImages: SliderImagesDesserts } = useImageSlider(images);
+  const { SliderImages: SliderImagesDrinks } = useImageSlider(images);
 
   return (
     <Container style={{ position: "relative", textAlign: "center" }}>
       <Typography variant="h4" gutterBottom>
         Tus Recomendaciones
       </Typography>
-      <SliderImages />
+      <Box sx={{ display: "flex", flexDirection: "column", gap: "8rem" }}>
+        <SliderImagesLunch />
+        <SliderImagesBreakfastAndDinner />
+        <SliderImagesDesserts />
+        <SliderImagesDrinks />
+      </Box>
     </Container>
   );
 };

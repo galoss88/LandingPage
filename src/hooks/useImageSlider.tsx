@@ -63,6 +63,7 @@ const useImageSlider = (images: Image[]): ImageSliderProps => {
           maxWidth: "1200px",
           margin: "0 auto",
           backgroundColor: "red",
+          position:"relative"
         }}
       >
         {visibleImages.map((image, index) => (
