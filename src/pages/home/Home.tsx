@@ -1,6 +1,7 @@
 import { Grid } from "@mui/material";
 import { Header } from "./components/header";
 import { Recomendations } from "./components/recomendations";
+import { Rooms } from "./components/rooms";
 
 const Home = () => {
   return (
@@ -17,7 +18,7 @@ const Home = () => {
         <Recomendations />
       </Grid>
       <Grid item sx={{ backgroundColor: "green" }}>
-        hola
+        <Rooms />
       </Grid>
       <Grid item sx={{ backgroundColor: "yellow" }}>
         hola

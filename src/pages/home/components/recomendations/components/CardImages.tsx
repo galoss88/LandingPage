@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Typography,
   IconButton,
@@ -9,7 +10,24 @@ import {
 } from "@mui/material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForwardIos";
-const CardImages = ({ title = "Titulo slider" }: { title?: string }) => {
+
+interface CardImagesProps {
+  title?: string;
+  isSmallScreen: boolean;
+  visibleImages: { title: string; imageUrl: string; price: string }[];
+  prevSlide: () => void;
+  nextSlide: () => void;
+}
+
+const CardImages: React.FC<CardImagesProps> = ({
+  title = "Titulo slider",
+  isSmallScreen,
+  visibleImages,
+  prevSlide,
+  nextSlide,
+}) => {
+  const styleArrows = { color: "#AE9672", fontSize: "2.4rem" };
+
   return (
     <Container
       sx={{
@@ -100,4 +118,5 @@ const CardImages = ({ title = "Titulo slider" }: { title?: string }) => {
     </Container>
   );
 };
+
 export default CardImages;
