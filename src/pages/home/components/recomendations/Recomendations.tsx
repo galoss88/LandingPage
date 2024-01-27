@@ -53,10 +53,10 @@ const Recomendations = () => {
         Tus Recomendaciones
       </Typography>
       <Box sx={{ display: "flex", flexDirection: "column", gap: "8rem" }}>
-        <SliderImagesLunch />
-        <SliderImagesBreakfastAndDinner />
-        <SliderImagesDesserts />
-        <SliderImagesDrinks />
+        <SliderImagesLunch title="Almuerzos"/>
+        <SliderImagesBreakfastAndDinner title="Desayunos y Cenas"/>
+        <SliderImagesDesserts title="Postres"/>
+        <SliderImagesDrinks title="Bebidas"/>
       </Box>
     </Container>
   );
