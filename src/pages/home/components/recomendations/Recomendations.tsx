@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Container,
   Typography,
@@ -51,8 +51,25 @@ const Recomendations = () => {
       price: "$35.00",
     },
   ];
+  const [isSmallScreen, setIsSmallScreen] = useState(
+    window.innerWidth <= 600
+  );
 
-  const { visibleImages, nextSlide, prevSlide } = useImageSlider(images, 3);
+  const handleResize = () => {
+    setIsSmallScreen(window.innerWidth <= 600);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const { visibleImages, nextSlide, prevSlide } = useImageSlider(
+    images,
+    isSmallScreen ? 1 : 3
+  );
 
   return (
     <Container style={{ position: "relative", textAlign: "center" }}>
@@ -64,11 +81,12 @@ const Recomendations = () => {
           display: "flex",
           justifyContent: "center",
           gap: "1rem", // Ajusta el espacio entre las tarjetas
-          width: '100%', // Ancho al 100% del contenedor padre
-          maxWidth: '1200px', // Ancho máximo de 1200px
-          margin: '0 auto', // Centrar el contenedor
-          backgroundColor: "red",
+          flexDirection: isSmallScreen ? "column" : "row", // Cambia a columna en pantallas pequeñas
           flexWrap: "wrap", // Permite que las tarjetas se envuelvan en pantallas pequeñas
+          width: "100%", // Ancho al 100% del contenedor padre
+          maxWidth: "1200px", // Ancho máximo de 1200px
+          margin: "0 auto", // Centrar el contenedor
+          backgroundColor: "red",
         }}
       >
         {visibleImages.map((image, index) => (
@@ -80,8 +98,8 @@ const Recomendations = () => {
               textAlign: "center",
               flexGrow: 1,
               flexShrink: 0,
-              flexBasis: "16rem",
-              maxWidth: "300px", // Ajusta el ancho máximo de las tarjetas
+              flexBasis: isSmallScreen ? "100%" : "16rem", // Ajusta el ancho en pantallas pequeñas
+              maxWidth: isSmallScreen ? "100%" : "300px", // Ajusta el ancho máximo en pantallas pequeñas
               margin: "1rem", // Ajusta el margen entre las tarjetas
             }}
           >
@@ -103,30 +121,34 @@ const Recomendations = () => {
         ))}
       </Box>
 
-      <IconButton
-        onClick={prevSlide}
-        style={{
-          display: visibleImages.length > 1 ? "block" : "none", // Ocultar flechas si solo hay una imagen visible
-          position: "absolute",
-          left: 0,
-          top: "50%",
-          transform: "translateY(-50%)",
-        }}
-      >
-        <ArrowBackIcon />
-      </IconButton>
-      <IconButton
-        onClick={nextSlide}
-        style={{
-          display: visibleImages.length > 1 ? "block" : "none", // Ocultar flechas si solo hay una imagen visible
-          position: "absolute",
-          right: 0,
-          top: "50%",
-          transform: "translateY(-50%)",
-        }}
-      >
-        <ArrowForwardIcon />
-      </IconButton>
+      {(isSmallScreen || visibleImages.length > 1) && (
+        <>
+          <IconButton
+            onClick={prevSlide}
+            style={{
+              position: "absolute",
+              left: 0,
+              top: "50%",
+              transform: "translateY(-50%)",
+              display: "block",
+            }}
+          >
+            <ArrowBackIcon />
+          </IconButton>
+          <IconButton
+            onClick={nextSlide}
+            style={{
+              position: "absolute",
+              right: 0,
+              top: "50%",
+              transform: "translateY(-50%)",
+              display: "block",
+            }}
+          >
+            <ArrowForwardIcon />
+          </IconButton>
+        </>
+      )}
     </Container>
   );
 };
