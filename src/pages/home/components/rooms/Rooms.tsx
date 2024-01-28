@@ -5,12 +5,12 @@ const Rooms = () => {
   const rooms = [
     {
       title: "Habitación 1",
-      imageUrl: "/src/assets/room.png",
+      imageUrl: "/room.png",
       description: "Descripción de la habitación 1.",
     },
     {
       title: "Habitación 2",
-      imageUrl: "/public/room.png",
+      imageUrl: "/room.png",
       description: "Descripción de la habitación 2.",
     },
     // Agrega más habitaciones según sea necesario

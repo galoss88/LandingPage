@@ -24,7 +24,7 @@ const Header = () => {
       >
         <div
           style={{
-            backgroundImage: `url('/public/imageHotel.jpg')`,
+            backgroundImage: `url('/imageHotel.jpg')`,
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center", // Ajusta la posición de fondo al centro
