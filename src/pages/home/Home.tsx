@@ -2,6 +2,7 @@ import { Grid } from "@mui/material";
 import { Header } from "./components/header";
 import { Recomendations } from "./components/recomendations";
 import { Rooms } from "./components/rooms";
+import { Events } from "./components/events";
 
 const Home = () => {
   return (
@@ -23,8 +24,17 @@ const Home = () => {
       >
         <Rooms />
       </Grid>
-      <Grid item sx={{ backgroundColor: "yellow" }}>
-        hola
+      <Grid
+        item
+        sx={{
+          display: "flex",
+          width: "100%",
+          justifyContent: "center",
+          alignItems: "center",
+          padding:"5rem"
+        }}
+      >
+        <Events />
       </Grid>
     </Grid>
   );
