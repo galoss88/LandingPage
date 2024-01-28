@@ -53,9 +53,9 @@ const CardImages: React.FC<CardImagesProps> = ({
           justifyContent: "center",
           gap: "1rem",
           flexDirection: isSmallScreen ? "column" : "row",
-          flexWrap: "wrap",
+          // flexWrap: "wrap",
           width: "100%",
-          maxWidth: "1200px",
+          maxWidth: "120rem",
           margin: "0 auto",
           position: "relative",
         }}

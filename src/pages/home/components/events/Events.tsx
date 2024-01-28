@@ -38,9 +38,17 @@ const Events = () => {
       <Box
         display="flex"
         flexWrap="wrap"
-        justifyContent="flex-start"
         alignItems="center"
-        sx={{ gap: { xs:"4rem",sm: "5rem", xl: "12.7rem" } }}
+        sx={{
+          gap: {
+            xs: "4rem",
+            sm: "5rem",
+            // md: "10rem",
+            // lg: "10rem",
+            xl: "12.7rem",
+          },
+          justifyContent: { xl: "flex-start", sx: "center", xs: "center" },
+        }}
       >
         {cardData.map((card) => (
           <CardEvent

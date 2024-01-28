@@ -12,7 +12,7 @@ const TitleAndButtonReserve = () => {
         alignItems: "center",
       }}
     >
-      <TitleHeader />
+      <TitleHeader title="Hotel Pedgorica"/>
       <Box sx={{ marginTop: "3.2rem" }}>
         <ButtonReservation title="Hacer reserva" />
       </Box>

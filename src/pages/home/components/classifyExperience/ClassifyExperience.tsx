@@ -18,6 +18,9 @@ const ClassifyExperience = () => {
     color: "#FFF",
     width: "100%",
     fontSize: "1.6rem",
+    "&:hover": {
+      backgroundColor: "#AE9672",
+    },
   };
 
   return (

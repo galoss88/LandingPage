@@ -37,7 +37,7 @@ const CardRooms: React.FC<CardRoomsProps> = ({ room }) => {
         image={room.imageUrl}
         sx={{
           objectFit: "cover",
-          width: { xs: "auto", sm: "auto", md: "auto", lg: "auto", xl: "45%" },
+          width: { xs: "auto", sm: "auto", md: "auto", lg: "auto", xl: "40%" },
           borderTopLeftRadius: "12px",
           borderBottomLeftRadius: "12px",
         }}
