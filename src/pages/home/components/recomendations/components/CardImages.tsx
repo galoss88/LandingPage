@@ -1,15 +1,15 @@
-import React from "react";
-import {
-  Typography,
-  IconButton,
-  Card,
-  CardMedia,
-  CardContent,
-  Box,
-  Container,
-} from "@mui/material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForwardIos";
+import {
+  Box,
+  Card,
+  CardContent,
+  CardMedia,
+  Container,
+  IconButton,
+  Typography,
+} from "@mui/material";
+import React from "react";
 import { stylesSubtitules } from "../../styles/subtitles";
 
 interface CardImagesProps {
@@ -72,6 +72,7 @@ const CardImages: React.FC<CardImagesProps> = ({
               flexBasis: isSmallScreen ? "100%" : "16rem",
               maxWidth: isSmallScreen ? "100%" : "20rem",
               margin: "1rem",
+              boxShadow:"none"
             }}
           >
             <CardMedia
