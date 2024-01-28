@@ -1,51 +1,17 @@
 import { Box, Container, Typography } from "@mui/material";
 import useImageSlider from "../../../../hooks/useImageSliderRecomendations";
+import { useRecomendations } from "../../../../state/recomendations";
 
 const Recomendations = () => {
-  const images = [
-    {
-      title: "Nombre 1",
-      imageUrl:
-        "https://www.publicdomainpictures.net/pictures/370000/nahled/hotel-resort-at-night-1602594966o23.jpg",
-      price: "$10.00",
-    },
-    {
-      title: "Nombre 2",
-      imageUrl:
-        "https://www.publicdomainpictures.net/pictures/370000/nahled/hotel-resort-at-night-1602594966o23.jpg",
-      price: "$15.00",
-    },
-    {
-      title: "Nombre 3",
-      imageUrl:
-        "https://www.publicdomainpictures.net/pictures/370000/nahled/hotel-resort-at-night-1602594966o23.jpg",
-      price: "$20.00",
-    },
-    {
-      title: "Nombre 4",
-      imageUrl:
-        "https://www.publicdomainpictures.net/pictures/370000/nahled/hotel-resort-at-night-1602594966o23.jpg",
-      price: "$25.00",
-    },
-    {
-      title: "Nombre 5",
-      imageUrl:
-        "https://www.publicdomainpictures.net/pictures/370000/nahled/hotel-resort-at-night-1602594966o23.jpg",
-      price: "$30.00",
-    },
-    {
-      title: "Nombre 6",
-      imageUrl:
-        "https://www.publicdomainpictures.net/pictures/370000/nahled/hotel-resort-at-night-1602594966o23.jpg",
-      price: "$35.00",
-    },
-  ];
+  const { recomendationsLunch, breakfast, desserts, drinks } =
+    useRecomendations();
 
-  const { SliderImages: SliderImagesLunch } = useImageSlider(images);
+  const { SliderImages: SliderImagesLunch } =
+    useImageSlider(recomendationsLunch);
   const { SliderImages: SliderImagesBreakfastAndDinner } =
-    useImageSlider(images);
-  const { SliderImages: SliderImagesDesserts } = useImageSlider(images);
-  const { SliderImages: SliderImagesDrinks } = useImageSlider(images);
+    useImageSlider(breakfast);
+  const { SliderImages: SliderImagesDesserts } = useImageSlider(desserts);
+  const { SliderImages: SliderImagesDrinks } = useImageSlider(drinks);
 
   return (
     <Container style={{ position: "relative", textAlign: "center" }}>

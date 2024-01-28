@@ -1,22 +1,9 @@
 import { Container } from "@mui/material";
 import useCreateSliderRooms from "../../../../hooks/useCreateSliderRooms";
-import { useStore } from "../../../../state";
+import { useRooms } from "../../../../state/rooms";
 
 const Rooms = () => {
-  const { rooms } = useStore();
-  // const rooms = [
-  //   {
-  //     title: "Habitación 1",
-  //     imageUrl: "/room.png",
-  //     description: "Descripción de la habitación 1.",
-  //   },
-  //   {
-  //     title: "Habitación 2",
-  //     imageUrl: "/room.png",
-  //     description: "Descripción de la habitación 2.",
-  //   },
-  //   // Agrega más habitaciones según sea necesario
-  // ];
+  const { rooms } = useRooms();
 
   const { SliderImages } = useCreateSliderRooms(
     rooms.map((room) => ({ ...room, price: "$25000" }))
