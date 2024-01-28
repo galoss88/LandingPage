@@ -105,7 +105,7 @@ function Navbar() {
             variant="h5"
             noWrap
             component="a"
-            href="#app-bar-with-responsive-menu"
+            href="#home"
             sx={{
               mr: 2,
               display: { xs: "flex", md: "none" },
@@ -146,11 +146,23 @@ function Navbar() {
                       width: "100%",
                       height: 2, // Grosor de la línea
                       backgroundColor: "#FFF", // Color de la línea
-                    }
-                  }
+                    },
+                  },
                 }}
               >
-                {page}
+                <Typography
+                  variant="h5"
+                  noWrap
+                  component="a"
+                  href={`#${page}`}
+                  sx={{
+                    textDecoration: "none",
+                    color: "#FFF",
+                    fontFamily: "Jost",
+                  }}
+                >
+                  {page}
+                </Typography>
               </Button>
             ))}
           </Box>

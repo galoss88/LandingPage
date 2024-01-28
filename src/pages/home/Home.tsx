@@ -11,17 +11,19 @@ const Home = () => {
   return (
     <Grid
       container
+      id="Home"
       direction="column"
       sx={{ minHeight: "100vh", margin: 0, minWidth: "100vw", gap: "8rem" }}
     >
       <Grid item>
         <Header />
       </Grid>
-      <Grid item sx={{alignContent:"center"}}>
+      <Grid id="Menu" item sx={{ alignContent: "center" }}>
         <Recomendations />
       </Grid>
       <Grid
         item
+        id="rooms"
         sx={{
           display: "flex",
           backgroundColor: "#AE9672",
@@ -34,6 +36,7 @@ const Home = () => {
       </Grid>
       <Grid
         item
+        id="Eventos"
         sx={{
           display: "flex",
           width: "100%",
@@ -46,6 +49,7 @@ const Home = () => {
       </Grid>
       <Grid
         item
+        id="Servicios"
         sx={{
           display: "flex",
           width: "100%",
@@ -57,6 +61,7 @@ const Home = () => {
       </Grid>
       <Grid
         item
+        id="classifyExperience"
         sx={{
           display: "flex",
           width: "100%",
