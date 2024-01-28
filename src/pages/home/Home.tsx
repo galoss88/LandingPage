@@ -1,42 +1,70 @@
-import { Grid } from "@mui/material";
+import { Grid, Container } from "@mui/material";
 import { Header } from "./components/header";
 import { Recomendations } from "./components/recomendations";
 import { Rooms } from "./components/rooms";
 import { Events } from "./components/events";
+import { Services } from "./components/services";
+import Footer from "./components/footer/Footer";
 
 const Home = () => {
   return (
-    <Grid container direction="column" sx={{ minHeight: "100vh" }}>
-      <Grid item xs={12} xl={12}>
-        <Header />
+    <Container component="main" maxWidth="xl" sx={{ minWidth: "100vw" }}>
+      <Grid container direction="column" sx={{ minHeight: "100vh", margin: 0 }}>
+        <Grid item>
+          <Header />
+        </Grid>
+        <Grid item>
+          <Recomendations />
+        </Grid>
+        <Grid
+          item
+          container={false} // Establecer container en false
+          sx={{
+            display: "flex",
+            backgroundColor: "#AE9672",
+            justifyContent: "center",
+            alignItems: "center",
+            width: "100%", // Ajustar el ancho al 100%
+          }}
+        >
+          <Rooms />
+        </Grid>
+        <Grid
+          item
+          sx={{
+            display: "flex",
+            width: "100%",
+            justifyContent: "center",
+            alignItems: "center",
+            padding: "5rem",
+          }}
+        >
+          <Events />
+        </Grid>
+        <Grid
+          item
+          sx={{
+            display: "flex",
+            width: "100%",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Services />
+        </Grid>
+        <Grid
+          item
+          sx={{
+            display: "flex",
+            width: "100%",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Footer />
+        </Grid>
       </Grid>
-      <Grid item>
-        <Recomendations />
-      </Grid>
-      <Grid
-        item
-        sx={{
-          display: "flex",
-          backgroundColor: "#AE9672",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <Rooms />
-      </Grid>
-      <Grid
-        item
-        sx={{
-          display: "flex",
-          width: "100%",
-          justifyContent: "center",
-          alignItems: "center",
-          padding:"5rem"
-        }}
-      >
-        <Events />
-      </Grid>
-    </Grid>
+    </Container>
   );
 };
 
