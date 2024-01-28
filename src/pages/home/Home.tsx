@@ -5,13 +5,14 @@ import { Header } from "./components/header";
 import { Recomendations } from "./components/recomendations";
 import { Rooms } from "./components/rooms";
 import { Services } from "./components/services";
+import { ClassifyExperience } from "./components/classifyExperience";
 
 const Home = () => {
   return (
     <Grid
       container
       direction="column"
-      sx={{ minHeight: "100vh", margin: 0, minWidth: "100vw", gap:"8rem" }}
+      sx={{ minHeight: "100vh", margin: 0, minWidth: "100vw", gap: "8rem" }}
     >
       <Grid item>
         <Header />
@@ -53,6 +54,17 @@ const Home = () => {
         }}
       >
         <Services />
+      </Grid>
+      <Grid
+        item
+        sx={{
+          display: "flex",
+          width: "100%",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <ClassifyExperience />
       </Grid>
       <Grid
         item

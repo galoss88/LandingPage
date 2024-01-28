@@ -4,37 +4,37 @@ import useImageSlider from "../../../../hooks/useImageSliderRecomendations";
 const Recomendations = () => {
   const images = [
     {
-      title: "Imagen 1",
+      title: "Nombre 1",
       imageUrl:
         "https://www.publicdomainpictures.net/pictures/370000/nahled/hotel-resort-at-night-1602594966o23.jpg",
       price: "$10.00",
     },
     {
-      title: "Imagen 2",
+      title: "Nombre 2",
       imageUrl:
         "https://www.publicdomainpictures.net/pictures/370000/nahled/hotel-resort-at-night-1602594966o23.jpg",
       price: "$15.00",
     },
     {
-      title: "Imagen 3",
+      title: "Nombre 3",
       imageUrl:
         "https://www.publicdomainpictures.net/pictures/370000/nahled/hotel-resort-at-night-1602594966o23.jpg",
       price: "$20.00",
     },
     {
-      title: "Imagen 4",
+      title: "Nombre 4",
       imageUrl:
         "https://www.publicdomainpictures.net/pictures/370000/nahled/hotel-resort-at-night-1602594966o23.jpg",
       price: "$25.00",
     },
     {
-      title: "Imagen 5",
+      title: "Nombre 5",
       imageUrl:
         "https://www.publicdomainpictures.net/pictures/370000/nahled/hotel-resort-at-night-1602594966o23.jpg",
       price: "$30.00",
     },
     {
-      title: "Imagen 6",
+      title: "Nombre 6",
       imageUrl:
         "https://www.publicdomainpictures.net/pictures/370000/nahled/hotel-resort-at-night-1602594966o23.jpg",
       price: "$35.00",
@@ -57,7 +57,6 @@ const Recomendations = () => {
           fontStyle: "normal",
           fontWeight: 500,
           lineHeight: "normal",
-          marginBottom: "8rem",
         }}
         variant="h4"
         gutterBottom

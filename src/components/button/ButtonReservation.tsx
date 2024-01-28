@@ -18,9 +18,10 @@ const ButtonReservation: React.FC<ButtonHacerReservaProps> = ({
       sx={{
         backgroundColor: "white",
         color: " #AE9672",
-        fontSize: "20px",
+        fontSize: "2rem",
         fontWeight: 500,
-        width:"100%"
+        width: "100%",
+        "&:hover": { backgroundColor: "#AE9672", color: "white" },
       }}
       onClick={onClick}
     >

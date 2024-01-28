@@ -81,10 +81,32 @@ const CardImages: React.FC<CardImagesProps> = ({
               image={image.imageUrl}
             />
             <CardContent>
-              <Typography variant="h5" gutterBottom>
+              <Typography
+                sx={{
+                  color: "#000",
+                  fontFamily: "Inter",
+                  fontSize: "1.6rem",
+                  fontStyle: "normal",
+                  fontWeight: 600,
+                  lineHeight: "normal",
+                }}
+                variant="h5"
+                gutterBottom
+              >
                 {image.title}
               </Typography>
-              <Typography variant="body1" gutterBottom>
+              <Typography
+                sx={{
+                  color: "#000",
+                  fontFamily: "Inter",
+                  fontSize: "1rem",
+                  fontStyle: "normal",
+                  fontWeight: 400,
+                  lineHeight: "normal",
+                }}
+                variant="body1"
+                gutterBottom
+              >
                 Precio: {image.price}
               </Typography>
             </CardContent>

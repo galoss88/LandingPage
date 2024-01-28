@@ -13,8 +13,9 @@ const TitleAndButtonReserve = () => {
       }}
     >
       <TitleHeader />
-
-      <ButtonReservation />
+      <Box sx={{ marginTop: "3.2rem" }}>
+        <ButtonReservation title="Hacer reserva" />
+      </Box>
     </Box>
   );
 };

@@ -1,6 +1,5 @@
-import React from "react";
-import useCreateServices from "../../../../hooks/useCreateServices";
 import { Container } from "@mui/material";
+import useCreateServices from "../../../../hooks/useCreateServices";
 
 const images = [
   { url: "/src/assets/Ellipse 1.svg", title: "Piscina" },
