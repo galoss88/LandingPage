@@ -10,8 +10,8 @@ const Rooms = () => {
     },
     {
       title: "Habitación 2",
-      imageUrl: "/src/assets/room.png",
-      description: "Descripción de la habitación 2. asdassadasddasdadasd",
+      imageUrl: "/public/room.png",
+      description: "Descripción de la habitación 2.",
     },
     // Agrega más habitaciones según sea necesario
   ];

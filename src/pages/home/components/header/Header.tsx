@@ -1,7 +1,6 @@
 import { Box } from "@mui/material";
 import { Navbar } from "./components";
 import { TitleAndButtonReserve } from "./components/titleAndButtonReserve";
-
 const Header = () => {
   return (
     <Box
@@ -25,7 +24,7 @@ const Header = () => {
       >
         <div
           style={{
-            backgroundImage: `url('/src/assets/imageHotel.jpg')`,
+            backgroundImage: `url('/public/imageHotel.jpg')`,
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center", // Ajusta la posición de fondo al centro
