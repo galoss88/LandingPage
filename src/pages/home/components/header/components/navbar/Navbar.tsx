@@ -10,6 +10,7 @@ import MenuItem from "@mui/material/MenuItem";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import * as React from "react";
+
 const pages = ["Home", "Menu", "Eventos", "Servicios"];
 const settings = ["Home", "Menu", "Eventos", "Servicios"];
 
@@ -34,9 +35,15 @@ function Navbar() {
   };
 
   return (
-    <AppBar position="static" color="transparent" >
-      <Container maxWidth="xl"  sx={{ backgroundColor: 'rgba(255, 0, 0, 0)' }}>
-        <Toolbar disableGutters >
+    <AppBar
+      position="static"
+      color="transparent"
+      sx={{
+        boxShadow: "none",
+      }}
+    >
+      <Container maxWidth="xl" sx={{ backgroundColor: "rgba(255, 0, 0, 0)" }}>
+        <Toolbar disableGutters>
           <Typography
             variant="h6"
             noWrap
@@ -45,11 +52,14 @@ function Navbar() {
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
-              fontWeight: 700,
               letterSpacing: ".3rem",
-              color: "inherit",
               textDecoration: "none",
+              color: "#F5F5F5",
+              fontFamily: "Jost",
+              fontSize: "31.25px",
+              fontStyle: "normal",
+              fontWeight: 900,
+              lineHeight: "normal",
             }}
           >
             LOGO
@@ -116,19 +126,39 @@ function Navbar() {
               justifyContent: "center",
             }}
           >
+
             {pages.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "black", display: "block" }}
+                sx={{
+                  my: 2,
+                  color: "white",
+                  display: "block",
+                  fontFamily: "Jost",
+                }}
               >
                 {page}
               </Button>
+
+              
             ))}
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-            <AccountBoxIcon />
+            <div
+              style={{
+                backgroundColor: "black",
+                width: "2.4rem",
+                height: "2.4rem",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                marginRight:"2rem"
+              }}
+            >
+              <AccountBoxIcon sx={{ fontSize: "3.5rem", color: "#ffffff" }} />
+            </div>
             <Menu
               sx={{ mt: "45px" }}
               id="menu-appbar"

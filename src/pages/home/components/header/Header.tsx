@@ -1,32 +1,64 @@
-import { Box, Container } from "@mui/material";
+import { Box } from "@mui/material";
 import { Navbar } from "./components";
 import { TitleAndButtonReserve } from "./components/titleAndButtonReserve";
 
 const Header = () => {
   return (
-    <Container
+    <Box
       sx={{
-        height: "376px",
-        backgroundImage: `url('/src/assets/imageHotel.jpg')`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
+        position: "relative",
+        height: "37.6rem",
         width: "100%",
+        overflow: "hidden",
       }}
     >
-      <Box width={"100%"} textAlign={"center"}>
+      <Box
+        component="div"
+        sx={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          overflow: "hidden",
+        }}
+      >
+        <div
+          style={{
+            backgroundImage: `url('/src/assets/imageHotel.jpg')`,
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center", // Ajusta la posición de fondo al centro
+            filter: "brightness(0.7)",
+            width: "100%",
+            height: "100%",
+          }}
+        />
+      </Box>
+
+      <Box
+        sx={{
+          zIndex: 1,
+          width: "100%",
+          textAlign: "center",
+        }}
+      >
         <Navbar />
       </Box>
 
       <Box
-        width={"100%"}
-        height={"100%"}
-        display={"flex"}
-        justifyContent={"center"}
-        alignItems={"center"}
+        sx={{
+          zIndex: 1,
+          width: "100%",
+          height: "100%",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
       >
         <TitleAndButtonReserve />
       </Box>
-    </Container>
+    </Box>
   );
 };
 

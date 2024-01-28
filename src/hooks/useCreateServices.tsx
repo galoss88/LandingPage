@@ -33,10 +33,15 @@ const useCreateServices = ({ images }: CustomHookProps) => {
                   sx={{
                     width: "80px",
                     height: "80px",
-                    margin: "0 auto",
+                    margin: "0 auto 1.2rem auto",
                   }}
                 />
-                <Typography variant="subtitle1">{image.title}</Typography>
+                <Typography
+                 
+                  variant="subtitle1"
+                >
+                  {image.title}
+                </Typography>
               </Box>
             </Grid>
           ))}

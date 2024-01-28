@@ -19,7 +19,6 @@ const CardRooms: React.FC<CardRoomsProps> = ({ room }) => {
     <Card
       sx={{
         display: "flex",
-        flexDirection: "row",
         height: "100%",
         borderRadius: "12px",
         overflow: "hidden",
@@ -27,6 +26,8 @@ const CardRooms: React.FC<CardRoomsProps> = ({ room }) => {
         justifyContent: "center",
         alignItems: "center",
         backgroundColor: "transparent",
+        flexDirection: { xs: "column", xl: "row" },
+        width: { xs: "auto", sm: "auto", md: "auto", lg: "100%", xl: "100%" },
       }}
     >
       <CardMedia
@@ -36,7 +37,7 @@ const CardRooms: React.FC<CardRoomsProps> = ({ room }) => {
         image={room.imageUrl}
         sx={{
           objectFit: "cover",
-          width: "45%",
+          width: { xs: "auto", sm: "auto", md: "auto", lg: "auto", xl: "45%" },
           borderTopLeftRadius: "12px",
           borderBottomLeftRadius: "12px",
         }}
@@ -49,14 +50,32 @@ const CardRooms: React.FC<CardRoomsProps> = ({ room }) => {
           justifyContent: "space-between",
           alignItems: "center",
           height: "20rem",
+          maxWidth: "30rem",
         }}
       >
-        <CardContent sx={{ flexGrow: 1, padding: "16px" }}>
+        <CardContent
+          sx={{
+            flexGrow: 1,
+            padding: "16px",
+            maxWidth: "30rem",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            height:"100%"
+          }}
+        >
           <Typography
             variant="h6"
             fontWeight="bold"
-            color={"primary.main"}
-            fontSize={"1.8rem"}
+            sx={{
+              color: "#FFF",
+              fontFamily: "Inter",
+              fontSize: "3.1rem",
+              fontStyle: "normal",
+              fontWeight: 800,
+              lineHeight: "normal",
+            }}
             mb={1}
           >
             {room.title}
@@ -65,8 +84,13 @@ const CardRooms: React.FC<CardRoomsProps> = ({ room }) => {
             variant="body2"
             color="text.secondary"
             sx={{
-              fontSize: "1rem",
-              lineHeight: "1.5",
+              color: "#FFF",
+              textAlign: "justify",
+              fontFamily: "Inter",
+              fontSize: "19px",
+              fontStyle: "normal",
+              fontWeight: 400,
+              lineHeight: "normal",
             }}
           >
             {room.description}

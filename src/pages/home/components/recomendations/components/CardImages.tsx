@@ -26,7 +26,10 @@ const CardImages: React.FC<CardImagesProps> = ({
   prevSlide,
   nextSlide,
 }) => {
-  const styleArrows = { color: "#AE9672", fontSize: "2.4rem" };
+  const styleArrows = {
+    color: "#AE9672",
+    fontSize: { xs: "2rem", xl: "2.4rem" },
+  };
 
   return (
     <Container
@@ -35,7 +38,7 @@ const CardImages: React.FC<CardImagesProps> = ({
         flexDirection: "column",
         justifyContent: "flex-start",
         alignItems: "flex-start",
-        width: "100%",
+        width: { xs: "80%", sm: "95%", md: "70%", xl: "100%" },
         gap: "2rem",
       }}
     >
@@ -66,7 +69,7 @@ const CardImages: React.FC<CardImagesProps> = ({
               flexGrow: 1,
               flexShrink: 0,
               flexBasis: isSmallScreen ? "100%" : "16rem",
-              maxWidth: isSmallScreen ? "100%" : "300px",
+              maxWidth: isSmallScreen ? "100%" : "20rem",
               margin: "1rem",
             }}
           >
@@ -90,9 +93,10 @@ const CardImages: React.FC<CardImagesProps> = ({
           <>
             <IconButton
               onClick={prevSlide}
-              style={{
+              sx={{
                 position: "absolute",
-                left: "0",
+                left: { xs: "-2.3rem", xl: "10rem" },
+
                 top: "50%",
                 transform: "translateY(-50%)",
                 display: "block",
@@ -102,11 +106,13 @@ const CardImages: React.FC<CardImagesProps> = ({
             </IconButton>
             <IconButton
               onClick={nextSlide}
-              style={{
+              sx={{
                 position: "absolute",
-                right: 0,
+                right: { xs: "-2.3rem", xl: "10rem" },
                 top: "50%",
                 transform: "translateY(-50%)",
+                height: { xs: "auto", xl: 0 },
+                width: { xs: "auto", xl: 0 },
                 display: "block",
               }}
             >

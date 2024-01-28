@@ -1,5 +1,5 @@
 import { Container } from "@mui/material";
-import useImageSlider from "../../../../hooks/useCreateSliderRooms";
+import useCreateSliderRooms from "../../../../hooks/useCreateSliderRooms";
 
 const Rooms = () => {
   const rooms = [
@@ -11,13 +11,13 @@ const Rooms = () => {
     {
       title: "Habitación 2",
       imageUrl: "/src/assets/room.png",
-      description: "Descripción de la habitación 2.",
+      description: "Descripción de la habitación 2. asdassadasddasdadasd",
     },
     // Agrega más habitaciones según sea necesario
   ];
 
-  const { SliderImages } = useImageSlider(
-    rooms.map((room) => ({ ...room, price: "" }))
+  const { SliderImages } = useCreateSliderRooms(
+    rooms.map((room) => ({ ...room, price: "$25000" }))
   );
 
   return (
@@ -26,9 +26,10 @@ const Rooms = () => {
         sx={{
           display: "flex",
           justifyContent: "center",
-          width: "50%",
+          width: { xs: "100%", sm: "90%", md: "60%", lg: "50%", xl: "50%" },
           height: "100%",
           alignItems: "center",
+          padding: "5rem 0",
         }}
       >
         <SliderImages />

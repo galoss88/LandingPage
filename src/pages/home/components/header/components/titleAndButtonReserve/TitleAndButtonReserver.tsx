@@ -13,6 +13,7 @@ const TitleAndButtonReserve = () => {
       }}
     >
       <TitleHeader />
+
       <ButtonReservation />
     </Box>
   );

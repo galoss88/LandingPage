@@ -31,8 +31,8 @@ const CardEvent: React.FC<CustomCardProps> = ({
           backgroundPosition: "center",
           width: "100%",
           height: "100%",
-          filter: "brightness(0.5)", // Ajusta el valor de brillo según tus preferencias
-          boxShadow: "inset 0 0 10px rgba(0, 0, 0, 0.3)", // Ajusta el box-shadow "inset" según tus preferencias
+          filter: "brightness(0.5)",
+          boxShadow: "inset 0 0 10px rgba(0, 0, 0, 0.3)", 
         }}
       />
       <CardContent
