@@ -126,7 +126,6 @@ function Navbar() {
               justifyContent: "center",
             }}
           >
-
             {pages.map((page) => (
               <Button
                 key={page}
@@ -136,12 +135,23 @@ function Navbar() {
                   color: "white",
                   display: "block",
                   fontFamily: "Jost",
+                  fontSize: "1.6rem",
+                  position: "relative", // Añadido para posicionar correctamente el pseudo-elemento
+                  "&:hover": {
+                    "&::after": {
+                      content: '""',
+                      position: "absolute",
+                      left: 0,
+                      bottom: -2, // Ajusta la posición de la línea según tus necesidades
+                      width: "100%",
+                      height: 2, // Grosor de la línea
+                      backgroundColor: "#FFF", // Color de la línea
+                    }
+                  }
                 }}
               >
                 {page}
               </Button>
-
-              
             ))}
           </Box>
 
@@ -154,7 +164,7 @@ function Navbar() {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                marginRight:"2rem"
+                marginRight: "2rem",
               }}
             >
               <AccountBoxIcon sx={{ fontSize: "3.5rem", color: "#ffffff" }} />
