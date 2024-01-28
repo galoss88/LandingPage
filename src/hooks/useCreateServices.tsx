@@ -18,9 +18,9 @@ const useCreateServices = ({ images }: CustomHookProps) => {
       const rowImages = images.slice(i, i + 4);
 
       const row = (
-        <Grid container spacing={2} key={i}>
+        <Grid container spacing={{ xl: 2, xs: 0 }} key={i}>
           {rowImages.map((image, index) => (
-            <Grid item xs={12} sm={3} key={index}>
+            <Grid item xs={3} sm={3} key={index}>
               <Box
                 sx={{
                   textAlign: "center",
@@ -31,17 +31,12 @@ const useCreateServices = ({ images }: CustomHookProps) => {
                   alt={image.title}
                   src={image.url}
                   sx={{
-                    width: "80px",
-                    height: "80px",
+                    width: "8rem",
+                    height: "8rem",
                     margin: "0 auto 1.2rem auto",
                   }}
                 />
-                <Typography
-                 
-                  variant="subtitle1"
-                >
-                  {image.title}
-                </Typography>
+                <Typography variant="subtitle1">{image.title}</Typography>
               </Box>
             </Grid>
           ))}

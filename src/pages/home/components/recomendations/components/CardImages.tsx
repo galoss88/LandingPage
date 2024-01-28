@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForwardIos";
+import { stylesSubtitules } from "../../styles/subtitles";
 
 interface CardImagesProps {
   title?: string;
@@ -42,7 +43,7 @@ const CardImages: React.FC<CardImagesProps> = ({
         gap: "2rem",
       }}
     >
-      <Typography fontWeight={"bold"} variant="h4">
+      <Typography sx={stylesSubtitules} variant="h4">
         {title}
       </Typography>
 
