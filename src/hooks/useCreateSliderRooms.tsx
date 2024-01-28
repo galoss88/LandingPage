@@ -21,7 +21,7 @@ interface ImageSliderProps {
 const useImageSlider = (rooms: Room[]): ImageSliderProps => {
   const [startIndex, setStartIndex] = useState<number>(0);
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 600);
-  const visibleCount = isSmallScreen ? 1 : 3;
+  const visibleCount = isSmallScreen ? 1 : 1;
   const visibleRooms = rooms.slice(startIndex, startIndex + visibleCount);
 
   const handleResize = () => {
@@ -47,18 +47,18 @@ const useImageSlider = (rooms: Room[]): ImageSliderProps => {
 
   const SliderImages = () => {
     return (
-      <Box>
+      <Box sx={{ position: "relative", width: "100%", height: "100%" }}>
         {/* Puedes agregar lógica adicional aquí para el título si es necesario */}
         {visibleRooms.map((room, index) => (
           <CardRooms room={room} key={index} />
         ))}
-        {(isSmallScreen || visibleRooms.length > 1) && (
+        {(isSmallScreen || visibleRooms.length) && (
           <>
             <IconButton
               onClick={prevSlide}
               style={{
                 position: "absolute",
-                left: "0",
+                left: "-4%",
                 top: "50%",
                 transform: "translateY(-50%)",
                 display: "block",
@@ -70,7 +70,7 @@ const useImageSlider = (rooms: Room[]): ImageSliderProps => {
               onClick={nextSlide}
               style={{
                 position: "absolute",
-                right: 0,
+                right: "-4%",
                 top: "50%",
                 transform: "translateY(-50%)",
                 display: "block",
