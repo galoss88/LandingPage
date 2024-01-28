@@ -10,13 +10,15 @@ const Social = () => {
         alignItems: "center",
         justifyContent: "center",
         flexDirection: "column",
+        marginRight: "1rem",
       }}
     >
       <Box
         sx={{
           display: "flex",
           alignItems: "center",
-          justifyContent: "center",
+          width: "100%",
+          justifyContent: "flex-start",
           flexDirection: "row",
         }}
       >
