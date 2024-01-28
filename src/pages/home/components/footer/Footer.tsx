@@ -21,7 +21,7 @@ const Footer = () => {
         color: "#fff",
         padding: "15rem 0",
         textAlign: "center",
-        height: { xl: "33.2rem", xs: "40rem" },
+        height: { xl: "33.2rem", xs: "50rem" },
       }}
     >
       <Box
