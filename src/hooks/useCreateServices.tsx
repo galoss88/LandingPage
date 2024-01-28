@@ -19,6 +19,7 @@ const useCreateServices = ({ images }: CustomHookProps) => {
 
       const row = (
         <Grid container spacing={{ xl: 2, xs: 2 }} key={i} justifyContent={"center"}>
+          
           {rowImages.map((image, index) => (
             <Grid item xs={5} sm={3} key={index}>
               <Box

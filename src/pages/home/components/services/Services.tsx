@@ -1,5 +1,6 @@
-import { Container } from "@mui/material";
+import { Container, Typography } from "@mui/material";
 import useCreateServices from "../../../../hooks/useCreateServices";
+import { stylesSubtitules } from "../styles/subtitles";
 
 const images = [
   { url: "/Ellipse 1.svg", title: "Piscina" },
@@ -18,8 +19,15 @@ const Services = () => {
 
   return (
     <Container
-      sx={{ display: "flex", justifyContent: "center", width: "100%" }}
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        width: "100%",
+        flexDirection: "column",
+      }}
     >
+      <Typography sx={stylesSubtitules}>Servicios</Typography>
+
       <ImageGrid />
     </Container>
   );

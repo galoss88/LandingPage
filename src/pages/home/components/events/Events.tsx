@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 import CardEvent from "./components/CardEvent";
 import { stylesSubtitules } from "../styles/subtitles";
 
@@ -32,7 +32,13 @@ const Events = () => {
   ];
 
   return (
-    <Box>
+    <Container
+      sx={{
+        position: "relative",
+        alignItems: "flex-start",
+        flexDirection: "column",
+      }}
+    >
       <Typography sx={stylesSubtitules}>Eventos</Typography>
 
       <Box
@@ -47,7 +53,7 @@ const Events = () => {
             // lg: "10rem",
             xl: "12.7rem",
           },
-          justifyContent: { xl: "flex-start", sx: "center", xs: "center" },
+          justifyContent: { xl: "center", sx: "center", xs: "center" },
         }}
       >
         {cardData.map((card) => (
@@ -60,7 +66,7 @@ const Events = () => {
           />
         ))}
       </Box>
-    </Box>
+    </Container>
   );
 };
 

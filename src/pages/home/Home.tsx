@@ -17,7 +17,7 @@ const Home = () => {
       <Grid item>
         <Header />
       </Grid>
-      <Grid item>
+      <Grid item sx={{alignContent:"center"}}>
         <Recomendations />
       </Grid>
       <Grid
