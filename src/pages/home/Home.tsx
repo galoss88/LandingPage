@@ -78,6 +78,7 @@ const Home = () => {
           width: "100%",
           justifyContent: "center",
           alignItems: "center",
+          height: "auto",
           backgroundColor: "#AE9672",
         }}
       >
